@@ -25,6 +25,9 @@ th {
   </head>
   <body>
     <center>
+      <%
+        if(result.length != 0) {
+      %>
       <table border="1">
         <tr>
           <th>Organisation</th>
@@ -41,7 +44,9 @@ th {
           <td><%= result_list.lastName %></td>
           <td><%= result_list.npiNumber %></td>
        </tr>
-      <% }); %>
+      <% })} else { %>
+      <h2>NO RECORDS FOUND! Please Check Your Input Again!</h2>
+      <% }; %>
       </table>
     </center>
   </body>
