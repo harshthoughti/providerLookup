@@ -3,14 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Providers Lookup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   </head>
-  <body bgcolor="lightblue">
+  <body>
     <center>
     <form action="/providerlookup" method="POST">
-      <h2> MEDICAL PROVIDER LOOKUP </h2>
-      <h3>First Name</h3>  <input type="text" name = "n1"></input><br><br>
-      <h3>Last Name</h3>  <input type="text" name = "n2"></input><br><br>
-      <h3>NPI</h3>  <input type="text" name = "n3"></input><br><br>
+      <h2> MEDICAL PROVIDER LOOKUP </h2> <br><br>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label" style="font-size : 2rem">First Name</label>
+        <input type="text" class="form-control" name = "n1" placeholder="Enter Firstname">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="font-size : 2rem">Last Name</label>
+        <input type="text" class="form-control" name = "n2" placeholder="Enter Lastname">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="font-size : 2rem">NPI Number</label>
+        <input type="text" class="form-control" name = "n3" placeholder="Enter NPI">
+      </div>
       <input type="submit"></input>
     </form>
     </center>

@@ -82,9 +82,6 @@ app.post('/providerlookup', (req, res) => {
           if(result_list){
             res.render('table', {'result' : result_list});
           }
-          else{
-            res.send("No Data Found");
-          }
         }))
       } else if (req.body.n3) {
         Lookup.find( {lastName : req.body.n2, npiNumber : req.body.n3} , (function(err, result_list){
@@ -92,18 +89,12 @@ app.post('/providerlookup', (req, res) => {
           if(result_list){
             res.render('table', {'result' : result_list});
           }
-          else{
-            res.send("No Data Found");
-          }
         }))
       } else {
         Lookup.find( {lastName : req.body.n2} , (function(err, result_list){
 
           if(result_list){
             res.render('table', {'result' : result_list});
-          }
-          else{
-            res.send("No Data Found");
           }
         }))
       }
@@ -115,9 +106,6 @@ app.post('/providerlookup', (req, res) => {
           if(result_list){
             res.render('table', {'result' : result_list});
           }
-          else{
-            res.send("No Data Found");
-          }
         }))
       } else if (req.body.n2) {
         Lookup.find( {lastName : req.body.n2, npiNumber : req.body.n3} , (function(err, result_list){
@@ -125,18 +113,12 @@ app.post('/providerlookup', (req, res) => {
           if(result_list){
             res.render('table', {'result' : result_list});
           }
-          else{
-            res.send("No Data Found");
-          }
         }))
       } else {
         Lookup.find( {npiNumber : req.body.n3} , (function(err, result_list){
 
           if(result_list){
             res.render('table', {'result' : result_list});
-          }
-          else{
-            res.send("No Data Found");
           }
         }))
       }}
